@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\caffe\blob.hpp" />
+    <ClInclude Include="..\include\caffe\caffe.hpp" />
+    <ClInclude Include="..\include\caffe\common.hpp" />
+    <ClInclude Include="..\include\caffe\common_layers.hpp" />
+    <ClInclude Include="..\include\caffe\data_layers.hpp" />
+    <ClInclude Include="..\include\caffe\data_reader.hpp" />
+    <ClInclude Include="..\include\caffe\data_transformer.hpp" />
+    <ClInclude Include="..\include\caffe\filler.hpp" />
+    <ClInclude Include="..\include\caffe\internal_thread.hpp" />
+    <ClInclude Include="..\include\caffe\layer.hpp" />
+    <ClInclude Include="..\include\caffe\layer_factory.hpp" />
+    <ClInclude Include="..\include\caffe\loss_layers.hpp" />
+    <ClInclude Include="..\include\caffe\net.hpp" />
+    <ClInclude Include="..\include\caffe\neuron_layers.hpp" />
+    <ClInclude Include="..\include\caffe\parallel.hpp" />
+    <ClInclude Include="..\include\caffe\proto\caffe.pb.h" />
+    <ClInclude Include="..\include\caffe\python_layer.hpp" />
+    <ClInclude Include="..\include\caffe\solver.hpp" />
+    <ClInclude Include="..\include\caffe\syncedmem.hpp" />
+    <ClInclude Include="..\include\caffe\util\benchmark.hpp" />
+    <ClInclude Include="..\include\caffe\util\blocking_queue.hpp" />
+    <ClInclude Include="..\include\caffe\util\cudnn.hpp" />
+    <ClInclude Include="..\include\caffe\util\db.hpp" />
+    <ClInclude Include="..\include\caffe\util\db_leveldb.hpp" />
+    <ClInclude Include="..\include\caffe\util\db_lmdb.hpp" />
+    <ClInclude Include="..\include\caffe\util\device_alternate.hpp" />
+    <ClInclude Include="..\include\caffe\util\gpu_util.cuh" />
+    <ClInclude Include="..\include\caffe\util\hdf5.hpp" />
+    <ClInclude Include="..\include\caffe\util\im2col.hpp" />
+    <ClInclude Include="..\include\caffe\util\insert_splits.hpp" />
+    <ClInclude Include="..\include\caffe\util\io.hpp" />
+    <ClInclude Include="..\include\caffe\util\math_functions.hpp" />
+    <ClInclude Include="..\include\caffe\util\mkl_alternate.hpp" />
+    <ClInclude Include="..\include\caffe\util\mkstemp.h" />
+    <ClInclude Include="..\include\caffe\util\rng.hpp" />
+    <ClInclude Include="..\include\caffe\util\signal_handler.h" />
+    <ClInclude Include="..\include\caffe\util\upgrade_proto.hpp" />
+    <ClInclude Include="..\include\caffe\vision_layers.hpp" />
+    <ClInclude Include="..\src\caffe\proto\caffe.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\caffe\blob.cpp" />
+    <ClCompile Include="..\src\caffe\common.cpp" />
+    <ClCompile Include="..\src\caffe\data_reader.cpp" />
+    <ClCompile Include="..\src\caffe\data_transformer.cpp" />
+    <ClCompile Include="..\src\caffe\internal_thread.cpp" />
+    <ClCompile Include="..\src\caffe\layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\absval_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\accuracy_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\argmax_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\base_conv_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\base_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\bnll_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\concat_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\contrastive_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\conv_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_conv_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_pooling_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_relu_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_sigmoid_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_softmax_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\cudnn_tanh_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\deconv_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\dropout_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\dummy_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\eltwise_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\embed_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\euclidean_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\exp_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\filter_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\flatten_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\hdf5_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\hdf5_output_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\hinge_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\im2col_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\image_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\infogain_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\inner_product_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\log_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\lrn_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\memory_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\multinomial_logistic_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\mvn_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\neuron_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\pooling_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\power_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\prelu_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\reduction_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\relu_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\reshape_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\sigmoid_cross_entropy_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\sigmoid_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\silence_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\slice_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\softmax_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\softmax_loss_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\split_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\spp_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\tanh_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\threshold_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\tile_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layers\window_data_layer.cpp" />
+    <ClCompile Include="..\src\caffe\layer_factory.cpp" />
+    <ClCompile Include="..\src\caffe\net.cpp" />
+    <ClCompile Include="..\src\caffe\parallel.cpp" />
+    <ClCompile Include="..\src\caffe\proto\caffe.pb.cc" />
+    <ClCompile Include="..\src\caffe\solver.cpp" />
+    <ClCompile Include="..\src\caffe\syncedmem.cpp" />
+    <ClCompile Include="..\src\caffe\util\benchmark.cpp" />
+    <ClCompile Include="..\src\caffe\util\blocking_queue.cpp" />
+    <ClCompile Include="..\src\caffe\util\cudnn.cpp" />
+    <ClCompile Include="..\src\caffe\util\db.cpp" />
+    <ClCompile Include="..\src\caffe\util\db_leveldb.cpp" />
+    <ClCompile Include="..\src\caffe\util\db_lmdb.cpp" />
+    <ClCompile Include="..\src\caffe\util\hdf5.cpp" />
+    <ClCompile Include="..\src\caffe\util\im2col.cpp" />
+    <ClCompile Include="..\src\caffe\util\insert_splits.cpp" />
+    <ClCompile Include="..\src\caffe\util\io.cpp" />
+    <ClCompile Include="..\src\caffe\util\math_functions.cpp" />
+    <ClCompile Include="..\src\caffe\util\signal_handler.cpp" />
+    <ClCompile Include="..\src\caffe\util\upgrade_proto.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\src\caffe\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\scripts\GeneratePB.bat" />
+    <None Include="..\src\caffe\proto\caffe.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\caffe\layers\absval_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\base_data_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\bnll_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\concat_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\contrastive_loss_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\conv_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_conv_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_pooling_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_relu_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_sigmoid_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_softmax_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\cudnn_tanh_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\deconv_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\dropout_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\eltwise_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\embed_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\euclidean_loss_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\exp_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\filter_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\hdf5_data_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\hdf5_output_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\im2col_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\inner_product_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\log_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\lrn_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\mvn_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\pooling_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\power_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\prelu_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\reduction_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\relu_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\sigmoid_cross_entropy_loss_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\sigmoid_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\silence_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\slice_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\softmax_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\softmax_loss_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\split_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\tanh_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\threshold_layer.cu" />
+    <CudaCompile Include="..\src\caffe\layers\tile_layer.cu" />
+    <CudaCompile Include="..\src\caffe\util\im2col.cu" />
+    <CudaCompile Include="..\src\caffe\util\math_functions.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7B97D17-0B23-4BAB-8BD8-1BA632FCF70C}</ProjectGuid>
+    <RootNamespace>caffe</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\cudnn-6.5-win-v2\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(JIAH_THIRD_PARTY)\opencv\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\lmdb\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\cudnn-6.5-win-v2\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(JIAH_THIRD_PARTY)\opencv\x64\vc12\lib\$(Configuration);$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\lmdb\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\cudnn-6.5-win-v2\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(JIAH_THIRD_PARTY)\opencv\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\lmdb\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\cudnn-6.5-win-v2\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(JIAH_THIRD_PARTY)\opencv\x64\vc12\lib\$(Configuration);$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\lmdb\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(JIAH_THIRD_PARTY)\opencv\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\lmdb\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(JIAH_THIRD_PARTY)\opencv\x64\vc12\lib\$(Configuration);$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\lmdb\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opencv_core248d.lib;opencv_highgui248d.lib;opencv_imgproc248d.lib;opencv_features2d248d.lib;libprotobuf.lib;leveldb.lib;libglog.lib;gflags.lib;lmdb.lib;cudart.lib;cudnn.lib;cublas.lib;curand.lib;mkl_rt.lib;mkl_core_dll.lib;mkl_intel_thread_dll.lib;mkl_intel_lp64_dll.lib;hdf5.lib;hdf5_hl.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>USE_CUDNN;USE_LEVELDB;USE_OPENCV;USE_LMDB;WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>shlwapi.lib;leveldb.lib;cublas.lib;lmdb.lib;cudart.lib;cudnn.lib;curand.lib;hdf5.lib;hdf5_cpp.lib;hdf5_hl.lib;libgflags.lib;libglog.lib;libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;mkl_rt.lib;mkl_core_dll.lib;mkl_intel_thread_dll.lib;mkl_intel_lp64_dll.lib;opencv_core248d.lib;opencv_highgui248d.lib;opencv_imgproc248d.lib;opencv_features2d248d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_20,sm_20;compute_30,sm_30;compute_35,sm_35;compute_50,sm_50;</CodeGeneration>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <HostDebugInfo>false</HostDebugInfo>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>USE_CUDNN;USE_LEVELDB;USE_OPENCV;USE_LMDB;WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>shlwapi.lib;leveldb.lib;cublas.lib;lmdb.lib;cudart.lib;cudnn.lib;curand.lib;hdf5.lib;hdf5_cpp.lib;hdf5_hl.lib;libgflags.lib;libglog.lib;libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;mkl_rt.lib;mkl_core_dll.lib;mkl_intel_thread_dll.lib;mkl_intel_lp64_dll.lib;opencv_core248.lib;opencv_highgui248.lib;opencv_imgproc248.lib;opencv_features2d248.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_20,sm_20;compute_30,sm_30;compute_35,sm_35;compute_50,sm_50;</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.targets" />
+  </ImportGroup>
+</Project>

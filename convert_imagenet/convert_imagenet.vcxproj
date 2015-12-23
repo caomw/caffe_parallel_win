@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2B845BCF-D27C-4C29-A256-B2391C5CA83E}</ProjectGuid>
+    <RootNamespace>convert_imagenet</RootNamespace>
+    <ProjectName>convert_imageset</ProjectName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(JIAH_THIRD_PARTY)\lmdb\include;$(JIAH_THIRD_PARTY)\opencv\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(SolutionDir)x64\$(Configuration);$(JIAH_THIRD_PARTY)\lmdb\lib\$(Configuration);$(JIAH_THIRD_PARTY)\opencv\x64\vc12\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(JIAH_THIRD_PARTY)\lmdb\include;$(JIAH_THIRD_PARTY)\opencv\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(SolutionDir)x64\$(Configuration);$(JIAH_THIRD_PARTY)\lmdb\lib\$(Configuration);$(JIAH_THIRD_PARTY)\opencv\x64\vc12\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(JIAH_THIRD_PARTY)\google\include;$(JIAH_THIRD_PARTY)\boost-1-55\include;$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\include;$(JIAH_THIRD_PARTY)\hdf5\include;$(JIAH_THIRD_PARTY)\intel\mkl\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(JIAH_THIRD_PARTY)\google\lib\$(Configuration);$(JIAH_THIRD_PARTY)\boost-1-55\lib\$(Configuration);$(JIAH_THIRD_PARTY)\nvidia\CUDA\v6.5\lib\x64;$(JIAH_THIRD_PARTY)\hdf5\lib\$(Configuration);$(JIAH_THIRD_PARTY)\intel\mkl\lib\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENCV;USE_LMDB;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shlwapi.lib;cublas.lib;lmdb.lib;cudart.lib;cudnn.lib;curand.lib;hdf5.lib;hdf5_cpp.lib;hdf5_hl.lib;libgflags.lib;libglog.lib;libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;mkl_rt.lib;mkl_core_dll.lib;mkl_intel_thread_dll.lib;mkl_intel_lp64_dll.lib;opencv_core248d.lib;opencv_highgui248d.lib;opencv_imgproc248d.lib;opencv_features2d248d.lib;caffe.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;SolutionDir)src\caffe\proto\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_OPENCV;USE_LMDB;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>shlwapi.lib;cublas.lib;lmdb.lib;cudart.lib;cudnn.lib;curand.lib;hdf5.lib;hdf5_cpp.lib;hdf5_hl.lib;libgflags.lib;libglog.lib;libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;mkl_rt.lib;mkl_core_dll.lib;mkl_intel_thread_dll.lib;mkl_intel_lp64_dll.lib;opencv_core248.lib;opencv_highgui248.lib;opencv_imgproc248.lib;opencv_features2d248.lib;caffe.lib;leveldb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tools\convert_imageset.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.targets" />
+  </ImportGroup>
+</Project>
