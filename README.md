@@ -6,6 +6,7 @@ Dependencies:
 ----------
 * CUDA 7.0 for windows
 * third party: https://github.com/jh-yu/jiah_third_party
+* Visual Studio 2013
 
 
 # Caffe
